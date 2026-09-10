@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssvi-live"
+version = "0.1.0"
+authors = [{name = "Amman Kejela", email = "akejela@uchicago.edu"}]
+description = "Arbitrage-free SSVI volatility surfaces fitted to live listed option chains, following Gatheral & Jacquier (2013)."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "plotly",
+    "scipy",
+    "yfinance==1.7.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ssvi_live = ["example_data/*.csv"]

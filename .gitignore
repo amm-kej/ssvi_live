@@ -1,0 +1,10 @@
+.venv/
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.pdf
+.mypy_cache/
+fit_diagnostics_output/
